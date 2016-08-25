@@ -6,5 +6,27 @@
 </head>
 <body>
     <h1>Hello</h1>
+
+   <h3>Register</h3>
+   <form action="" method='post'>
+     {% csrf_token %}
+     Name: <input type="text" name="name">
+     Alias: <input type="text" name="alias">
+     Email: <input type="email" name="email">
+     Date of birth: <input type="date" name="birth" min="1910-01-01">
+     Password: <input type="password" name="password">
+     Confirm PW: <input type="password" name="repeat">
+     <input type="submit" value="Register">
+     <br>
+     *password should be at least 8 characters and contain upper case letters and numbers
+   </form>
+   <h3>Login</h3>
+   <form action="" method='post'>
+      {% csrf_token %}
+      Email <input type="email" name="email">
+      Password <input type="password" name="password">
+      <input type="submit" value="Login">
+   </form>
+
 </body>
 </html>
