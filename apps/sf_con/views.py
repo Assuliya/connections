@@ -7,3 +7,6 @@ from collections import Counter
 
 def index(request):
     return render(request, 'sf_con/index.html')
+
+def test(request):
+    return render(request, 'sf_con/test.html')
